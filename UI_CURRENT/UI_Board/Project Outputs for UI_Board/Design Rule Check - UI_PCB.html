@@ -1,0 +1,483 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10/07/2026</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">8:44:57 SA</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc" class="file"><acronym title="C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc">C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">53</td></tr>
+</table>
+</td>
+</table><a name="IDFMGWDWLQTOECMAU0SQTKRW0BTIDSKHUMN3PFEAKL5R2NEYG3B5YB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEDFCWQM3CIVUFXGGHCXWSORXVDZUCLUAHRGMFXMOJHWCIDRMAVVI">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDI2T3Y3OQYKYEK5NKCEKCIDDLXCEGVIQXRNRWK4F5E1OFY3BQCNRJ">Matched Lengths(Tolerance=1mm) (InNetClass('SPI'))</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI3W32WWQSWEAILFSTEDKFLOKPFM20UCLOEOBSMKLCP35PYXVJP4D">Matched Lengths(Tolerance=1mm) (InNetClass('SDIO'))</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDMQ240V55IQOMWSCHUEMYAV11HKVKIXGPY0LB1K5LI1P2QFA0VVH">Matched Lengths(Tolerance=1mm) (InNetClass('STM_OSC'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGLVAV0HPJZVGGNCQPY2KG44KBZLWEGPE0KA3QVRIZUPBKHEPVF">Matched Lengths(Tolerance=1mm) (InNetClass('RGB'))</a></td>
+<td class="column2">27</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0HR2NECBVEP3HOYRLUJKX51KNFO5WAUC2GRUHAEFGU3ND2RII03D">Matched Lengths(Tolerance=1mm) (InNetClass('FSMC'))</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWZC4QGD2RJTIHZIZD1CLQYSHBGFS3W243ZEQVCGK4HBBY34H4WIN">Matched Lengths(Tolerance=1mm) (InNetClass('SWD'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0YZJEKQYID3JF5HDBCE02HNISMTL40DVYFYPVSKZPTVUIM2JUIVB">Matched Lengths(Tolerance=1mm) (InDifferentialPair('USB'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFFRKCVKMARHTJH4MRWBVY5TPEE5EFIOSIFJZFSMTIOOXENLGPJGE">Matched Lengths(Tolerance=1mm) (InNetClass('SSD_OSC'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">53</td>
+</tr>
+</table><br><a name="IDI2T3Y3OQYKYEK5NKCEKCIDDLXCEGVIQXRNRWK4F5E1OFY3BQCNRJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1mm) (InNetClass('SPI'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6477.603mil|Location2.X=15718.079mil|Location1.Y=4053.5mil|Location2.Y=7755.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6477.603mil|Location2.X=15718.079mil|Location1.Y=4053.5mil|Location2.Y=7755.827mil|Absolute=True">Matched Net Lengths: Between Net SPI2_CS And Net SPI2_MOSI Length:0mm is not within 1mm tolerance of Length:37.531mm (36.531mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6499.876mil|Location2.X=6883mil|Location1.Y=4053.5mil|Location2.Y=5442.616mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6499.876mil|Location2.X=6883mil|Location1.Y=4053.5mil|Location2.Y=5442.616mil|Absolute=True">Matched Net Lengths: Between Net SPI2_MISO And Net SPI2_MOSI Length:34.991mm is not within 1mm tolerance of Length:37.531mm (1.54mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6488.74mil|Location2.X=6883mil|Location1.Y=4053.5mil|Location2.Y=5442.616mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6488.74mil|Location2.X=6883mil|Location1.Y=4053.5mil|Location2.Y=5442.616mil|Absolute=True">Matched Net Lengths: Between Net SPI2_MOSI And Net SPI2_SCK Length:32.794mm is not within 1mm tolerance of Length:37.531mm (3.738mm short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDI3W32WWQSWEAILFSTEDKFLOKPFM20UCLOEOBSMKLCP35PYXVJP4D"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1mm) (InNetClass('SDIO'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=17297.44mil|Location1.Y=4919.985mil|Location2.Y=6780.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=17297.44mil|Location1.Y=4919.985mil|Location2.Y=6780.615mil|Absolute=True">Matched Net Lengths: Between Net SD_CK And Net SD_CMD Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=18497.653mil|Location1.Y=4867.198mil|Location2.Y=6867.23mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=18497.653mil|Location1.Y=4867.198mil|Location2.Y=6867.23mil|Absolute=True">Matched Net Lengths: Between Net SD_CK And Net SD_D0 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=18267.653mil|Location1.Y=4867.198mil|Location2.Y=6910.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=18267.653mil|Location1.Y=4867.198mil|Location2.Y=6910.535mil|Absolute=True">Matched Net Lengths: Between Net SD_CK And Net SD_D1 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=18036.653mil|Location1.Y=4867.198mil|Location2.Y=6780.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=18036.653mil|Location1.Y=4867.198mil|Location2.Y=6780.615mil|Absolute=True">Matched Net Lengths: Between Net SD_CK And Net SD_D2 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=17806.653mil|Location1.Y=4867.198mil|Location2.Y=6780.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4568.638mil|Location2.X=17806.653mil|Location1.Y=4867.198mil|Location2.Y=6780.615mil|Absolute=True">Matched Net Lengths: Between Net SD_CK And Net SD_D3 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGLVAV0HPJZVGGNCQPY2KG44KBZLWEGPE0KA3QVRIZUPBKHEPVF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1mm) (InNetClass('RGB'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B0 And Net LFRAME Length:40.404mm is not within 1mm tolerance of Length:58.958mm (17.554mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B1 And Net LFRAME Length:40.904mm is not within 1mm tolerance of Length:58.958mm (17.054mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B2 And Net LFRAME Length:41.404mm is not within 1mm tolerance of Length:58.958mm (16.554mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B3 And Net LFRAME Length:41.904mm is not within 1mm tolerance of Length:58.958mm (16.054mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B4 And Net LFRAME Length:42.404mm is not within 1mm tolerance of Length:58.958mm (15.554mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B5 And Net LFRAME Length:42.904mm is not within 1mm tolerance of Length:58.958mm (15.054mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B6 And Net LFRAME Length:43.404mm is not within 1mm tolerance of Length:58.958mm (14.554mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net B7 And Net LFRAME Length:43.904mm is not within 1mm tolerance of Length:58.958mm (14.054mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G0 And Net LFRAME Length:36.404mm is not within 1mm tolerance of Length:58.958mm (21.554mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G1 And Net LFRAME Length:36.904mm is not within 1mm tolerance of Length:58.958mm (21.054mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G2 And Net LFRAME Length:27.071mm is not within 1mm tolerance of Length:58.958mm (30.888mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8912.531mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8912.531mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G3 And Net LFRAME Length:36.488mm is not within 1mm tolerance of Length:58.958mm (21.47mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G4 And Net LFRAME Length:41.145mm is not within 1mm tolerance of Length:58.958mm (16.814mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G5 And Net LFRAME Length:42.21mm is not within 1mm tolerance of Length:58.958mm (15.748mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G6 And Net LFRAME Length:43.276mm is not within 1mm tolerance of Length:58.958mm (14.682mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net G7 And Net LFRAME Length:44.342mm is not within 1mm tolerance of Length:58.958mm (13.617mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6751.086mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6751.086mil|Absolute=True">Matched Net Lengths: Between Net LDEN And Net LFRAME Length:56.064mm is not within 1mm tolerance of Length:58.958mm (1.894mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6711.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6711.716mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net LLINE Length:57.892mm is not within 1mm tolerance of Length:58.958mm (0.066mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net LSHIFT Length:44.327mm is not within 1mm tolerance of Length:58.958mm (13.631mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R0 Length:37.407mm is not within 1mm tolerance of Length:58.958mm (20.551mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7809.117mil|Location2.X=9123.288mil|Location1.Y=5116.713mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7809.117mil|Location2.X=9123.288mil|Location1.Y=5116.713mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R1 Length:53.468mm is not within 1mm tolerance of Length:58.958mm (4.49mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.2mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.2mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R2 Length:33.404mm is not within 1mm tolerance of Length:58.958mm (24.554mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7898.201mil|Location2.X=8900.37mil|Location1.Y=5268.366mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R3 Length:33.904mm is not within 1mm tolerance of Length:58.958mm (24.054mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7690.077mil|Location2.X=8900.37mil|Location1.Y=5168.146mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7690.077mil|Location2.X=8900.37mil|Location1.Y=5168.146mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R4 Length:56.29mm is not within 1mm tolerance of Length:58.958mm (1.668mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7678.94mil|Location2.X=8900.37mil|Location1.Y=5179.283mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7678.94mil|Location2.X=8900.37mil|Location1.Y=5179.283mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R5 Length:56.79mm is not within 1mm tolerance of Length:58.958mm (1.168mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7667.807mil|Location2.X=8900.37mil|Location1.Y=5190.416mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7667.807mil|Location2.X=8900.37mil|Location1.Y=5190.416mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R6 Length:57.29mm is not within 1mm tolerance of Length:58.958mm (0.668mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7656.67mil|Location2.X=8900.37mil|Location1.Y=5201.553mil|Location2.Y=6698.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7656.67mil|Location2.X=8900.37mil|Location1.Y=5201.553mil|Location2.Y=6698.604mil|Absolute=True">Matched Net Lengths: Between Net LFRAME And Net R7 Length:57.79mm is not within 1mm tolerance of Length:58.958mm (0.168mm short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID0HR2NECBVEP3HOYRLUJKX51KNFO5WAUC2GRUHAEFGU3ND2RII03D"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1mm) (InNetClass('FSMC'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_A18 And Net FSMC_D12 Length:23.398mm is not within 1mm tolerance of Length:40.368mm (15.971mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D0 And Net FSMC_D12 Length:18.289mm is not within 1mm tolerance of Length:40.368mm (21.08mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D1 And Net FSMC_D12 Length:18.854mm is not within 1mm tolerance of Length:40.368mm (20.514mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6540.107mil|Location2.X=7837.965mil|Location1.Y=5272.71mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6540.107mil|Location2.X=7837.965mil|Location1.Y=5272.71mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D10 And Net FSMC_D12 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7849.1mil|Location1.Y=5294.983mil|Location2.Y=5901.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7849.1mil|Location1.Y=5294.983mil|Location2.Y=5901.906mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D13 Length:35.843mm is not within 1mm tolerance of Length:40.368mm (3.525mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7860.236mil|Location1.Y=5294.983mil|Location2.Y=5913.042mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7860.236mil|Location1.Y=5294.983mil|Location2.Y=5913.042mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D14 Length:35.843mm is not within 1mm tolerance of Length:40.368mm (3.525mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7871.37mil|Location1.Y=5294.983mil|Location2.Y=5924.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7871.37mil|Location1.Y=5294.983mil|Location2.Y=5924.176mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D15 Length:35.843mm is not within 1mm tolerance of Length:40.368mm (3.526mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D2 Length:30.56mm is not within 1mm tolerance of Length:40.368mm (8.808mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6562.376mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D3 Length:31.692mm is not within 1mm tolerance of Length:40.368mm (7.677mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6473.292mil|Location2.X=7837.965mil|Location1.Y=5205.899mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6473.292mil|Location2.X=7837.965mil|Location1.Y=5205.899mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D4 Length:30.274mm is not within 1mm tolerance of Length:40.368mm (9.095mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6484.429mil|Location2.X=7837.965mil|Location1.Y=5217.033mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6484.429mil|Location2.X=7837.965mil|Location1.Y=5217.033mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D5 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6495.565mil|Location2.X=7837.965mil|Location1.Y=5228.168mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6495.565mil|Location2.X=7837.965mil|Location1.Y=5228.168mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D6 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6506.699mil|Location2.X=7837.965mil|Location1.Y=5239.305mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6506.699mil|Location2.X=7837.965mil|Location1.Y=5239.305mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D7 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6517.834mil|Location2.X=7837.965mil|Location1.Y=5250.441mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6517.834mil|Location2.X=7837.965mil|Location1.Y=5250.441mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D8 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6528.971mil|Location2.X=7837.965mil|Location1.Y=5261.575mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6528.971mil|Location2.X=7837.965mil|Location1.Y=5261.575mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D9 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6506.697mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6506.697mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_NE1 Length:27.819mm is not within 1mm tolerance of Length:40.368mm (11.549mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6540.107mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6540.107mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_NOE Length:26.122mm is not within 1mm tolerance of Length:40.368mm (13.246mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6528.97mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6528.97mil|Location2.X=7837.965mil|Location1.Y=5294.983mil|Location2.Y=5890.77mil|Absolute=True">Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_NWE Length:26.688mm is not within 1mm tolerance of Length:40.368mm (12.68mm short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

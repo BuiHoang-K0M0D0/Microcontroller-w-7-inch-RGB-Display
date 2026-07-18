@@ -1,0 +1,89 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\UI_PCB.PcbDoc
+Date     : 10/07/2026
+Time     : 8:44:57 SA
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('SPI'))
+   Violation between Matched Net Lengths: Between Net SPI2_CS And Net SPI2_MOSI Length:0mm is not within 1mm tolerance of Length:37.531mm (36.531mm short) 
+   Violation between Matched Net Lengths: Between Net SPI2_MISO And Net SPI2_MOSI Length:34.991mm is not within 1mm tolerance of Length:37.531mm (1.54mm short) 
+   Violation between Matched Net Lengths: Between Net SPI2_MOSI And Net SPI2_SCK Length:32.794mm is not within 1mm tolerance of Length:37.531mm (3.738mm short) 
+Rule Violations :3
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('SDIO'))
+   Violation between Matched Net Lengths: Between Net SD_CK And Net SD_CMD Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) 
+   Violation between Matched Net Lengths: Between Net SD_CK And Net SD_D0 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) 
+   Violation between Matched Net Lengths: Between Net SD_CK And Net SD_D1 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) 
+   Violation between Matched Net Lengths: Between Net SD_CK And Net SD_D2 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) 
+   Violation between Matched Net Lengths: Between Net SD_CK And Net SD_D3 Length:0mm is not within 1mm tolerance of Length:74.751mm (73.751mm short) 
+Rule Violations :5
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('STM_OSC'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('RGB'))
+   Violation between Matched Net Lengths: Between Net B0 And Net LFRAME Length:40.404mm is not within 1mm tolerance of Length:58.958mm (17.554mm short) 
+   Violation between Matched Net Lengths: Between Net B1 And Net LFRAME Length:40.904mm is not within 1mm tolerance of Length:58.958mm (17.054mm short) 
+   Violation between Matched Net Lengths: Between Net B2 And Net LFRAME Length:41.404mm is not within 1mm tolerance of Length:58.958mm (16.554mm short) 
+   Violation between Matched Net Lengths: Between Net B3 And Net LFRAME Length:41.904mm is not within 1mm tolerance of Length:58.958mm (16.054mm short) 
+   Violation between Matched Net Lengths: Between Net B4 And Net LFRAME Length:42.404mm is not within 1mm tolerance of Length:58.958mm (15.554mm short) 
+   Violation between Matched Net Lengths: Between Net B5 And Net LFRAME Length:42.904mm is not within 1mm tolerance of Length:58.958mm (15.054mm short) 
+   Violation between Matched Net Lengths: Between Net B6 And Net LFRAME Length:43.404mm is not within 1mm tolerance of Length:58.958mm (14.554mm short) 
+   Violation between Matched Net Lengths: Between Net B7 And Net LFRAME Length:43.904mm is not within 1mm tolerance of Length:58.958mm (14.054mm short) 
+   Violation between Matched Net Lengths: Between Net G0 And Net LFRAME Length:36.404mm is not within 1mm tolerance of Length:58.958mm (21.554mm short) 
+   Violation between Matched Net Lengths: Between Net G1 And Net LFRAME Length:36.904mm is not within 1mm tolerance of Length:58.958mm (21.054mm short) 
+   Violation between Matched Net Lengths: Between Net G2 And Net LFRAME Length:27.071mm is not within 1mm tolerance of Length:58.958mm (30.888mm short) 
+   Violation between Matched Net Lengths: Between Net G3 And Net LFRAME Length:36.488mm is not within 1mm tolerance of Length:58.958mm (21.47mm short) 
+   Violation between Matched Net Lengths: Between Net G4 And Net LFRAME Length:41.145mm is not within 1mm tolerance of Length:58.958mm (16.814mm short) 
+   Violation between Matched Net Lengths: Between Net G5 And Net LFRAME Length:42.21mm is not within 1mm tolerance of Length:58.958mm (15.748mm short) 
+   Violation between Matched Net Lengths: Between Net G6 And Net LFRAME Length:43.276mm is not within 1mm tolerance of Length:58.958mm (14.682mm short) 
+   Violation between Matched Net Lengths: Between Net G7 And Net LFRAME Length:44.342mm is not within 1mm tolerance of Length:58.958mm (13.617mm short) 
+   Violation between Matched Net Lengths: Between Net LDEN And Net LFRAME Length:56.064mm is not within 1mm tolerance of Length:58.958mm (1.894mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net LLINE Length:57.892mm is not within 1mm tolerance of Length:58.958mm (0.066mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net LSHIFT Length:44.327mm is not within 1mm tolerance of Length:58.958mm (13.631mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R0 Length:37.407mm is not within 1mm tolerance of Length:58.958mm (20.551mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R1 Length:53.468mm is not within 1mm tolerance of Length:58.958mm (4.49mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R2 Length:33.404mm is not within 1mm tolerance of Length:58.958mm (24.554mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R3 Length:33.904mm is not within 1mm tolerance of Length:58.958mm (24.054mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R4 Length:56.29mm is not within 1mm tolerance of Length:58.958mm (1.668mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R5 Length:56.79mm is not within 1mm tolerance of Length:58.958mm (1.168mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R6 Length:57.29mm is not within 1mm tolerance of Length:58.958mm (0.668mm short) 
+   Violation between Matched Net Lengths: Between Net LFRAME And Net R7 Length:57.79mm is not within 1mm tolerance of Length:58.958mm (0.168mm short) 
+Rule Violations :27
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('FSMC'))
+   Violation between Matched Net Lengths: Between Net FSMC_A18 And Net FSMC_D12 Length:23.398mm is not within 1mm tolerance of Length:40.368mm (15.971mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D0 And Net FSMC_D12 Length:18.289mm is not within 1mm tolerance of Length:40.368mm (21.08mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D1 And Net FSMC_D12 Length:18.854mm is not within 1mm tolerance of Length:40.368mm (20.514mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D10 And Net FSMC_D12 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D13 Length:35.843mm is not within 1mm tolerance of Length:40.368mm (3.525mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D14 Length:35.843mm is not within 1mm tolerance of Length:40.368mm (3.525mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D15 Length:35.843mm is not within 1mm tolerance of Length:40.368mm (3.526mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D2 Length:30.56mm is not within 1mm tolerance of Length:40.368mm (8.808mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D3 Length:31.692mm is not within 1mm tolerance of Length:40.368mm (7.677mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D4 Length:30.274mm is not within 1mm tolerance of Length:40.368mm (9.095mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D5 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D6 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D7 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D8 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_D9 Length:38.671mm is not within 1mm tolerance of Length:40.368mm (0.697mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_NE1 Length:27.819mm is not within 1mm tolerance of Length:40.368mm (11.549mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_NOE Length:26.122mm is not within 1mm tolerance of Length:40.368mm (13.246mm short) 
+   Violation between Matched Net Lengths: Between Net FSMC_D12 And Net FSMC_NWE Length:26.688mm is not within 1mm tolerance of Length:40.368mm (12.68mm short) 
+Rule Violations :18
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('SWD'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InDifferentialPair('USB'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1mm) (InNetClass('SSD_OSC'))
+Rule Violations :0
+
+
+Violations Detected : 53
+Waived Violations : 0
+Time Elapsed        : 00:00:00
