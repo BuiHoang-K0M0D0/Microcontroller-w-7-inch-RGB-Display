@@ -590,6 +590,8 @@ OutputName10=ODB++ Files
 OutputDocumentPath10=
 OutputVariantName10=[No Variations]
 OutputDefault10=0
+Configuration10_Name1=OutputConfigurationParameter1
+Configuration10_Item1=Compression_None=True|Compression_tar_tgz=True|Compression_zip=True|DifferentFootprints=False|ExportPositivePlaneLayers=False|GenerateDRCRulesFile=False|IncludeUnconnectedMidLayerPads=False|MergeNetTieNets=False|ObjsInsideBoardOutlineOnly=False|ODBProfileLayer=-1000|ODBProfileLayerV7=-1|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBottomLayerPlot=True|PlotBottomOverlayPlot=True|PlotBottomPastePlot=True|PlotBottomSolderPlot=True|PlotCounterHolesPairs=False|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotInternalPlane10Plot=False|PlotInternalPlane11Plot=False|PlotInternalPlane12Plot=False|PlotInternalPlane13Plot=False|PlotInternalPlane14Plot=False|PlotInternalPlane15Plot=False|PlotInternalPlane16Plot=False|PlotInternalPlane1Plot=True|PlotInternalPlane2Plot=True|PlotInternalPlane3Plot=False|PlotInternalPlane4Plot=False|PlotInternalPlane5Plot=False|PlotInternalPlane6Plot=False|PlotInternalPlane7Plot=False|PlotInternalPlane8Plot=False|PlotInternalPlane9Plot=False|PlotKeepOutLayerPlot=False|PlotMechanical10Plot=False|PlotMechanical11Plot=False|PlotMechanical12Plot=False|PlotMechanical13Plot=False|PlotMechanical14Plot=False|PlotMechanical15Plot=False|PlotMechanical16Plot=False|PlotMechanical1Plot=False|PlotMechanical2Plot=False|PlotMechanical3Plot=False|PlotMechanical4Plot=False|PlotMechanical5Plot=False|PlotMechanical6Plot=False|PlotMechanical7Plot=False|PlotMechanical8Plot=False|PlotMechanical9Plot=False|PlotMicroViasPairs=False|PlotMidLayer10Plot=False|PlotMidLayer11Plot=False|PlotMidLayer12Plot=False|PlotMidLayer13Plot=False|PlotMidLayer14Plot=False|PlotMidLayer15Plot=False|PlotMidLayer16Plot=False|PlotMidLayer17Plot=False|PlotMidLayer18Plot=False|PlotMidLayer19Plot=False|PlotMidLayer1Plot=False|PlotMidLayer20Plot=False|PlotMidLayer21Plot=False|PlotMidLayer22Plot=False|PlotMidLayer23Plot=False|PlotMidLayer24Plot=False|PlotMidLayer25Plot=False|PlotMidLayer26Plot=False|PlotMidLayer27Plot=False|PlotMidLayer28Plot=False|PlotMidLayer29Plot=False|PlotMidLayer2Plot=False|PlotMidLayer30Plot=False|PlotMidLayer3Plot=False|PlotMidLayer4Plot=False|PlotMidLayer5Plot=False|PlotMidLayer6Plot=False|PlotMidLayer7Plot=False|PlotMidLayer8Plot=False|PlotMidLayer9Plot=False|PlotNPTHPairs=False|PlotPTHPairs=False|PlotTopLayerPlot=True|PlotTopOverlayPlot=True|PlotTopPastePlot=True|PlotTopSolderPlot=True|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|Record=ODBView|Units=Metric|DocumentPath=C:\Users\buima\Desktop\UI_Board\UI_CURRENT\UI_Board\PDNAnalyzer_Output\UI_PCB\SimulationDummy.PcbDoc
 OutputType11=Plane
 OutputName11=Power-Plane Prints
 OutputDocumentPath11=
@@ -1601,19 +1603,20 @@ Net332=NetName=USB1_P|NetColor=$000099FF
 Net333=NetName=USB2_N|NetColor=$000099FF
 Net334=NetName=USB2_P|NetColor=$000099FF
 Net335=NetName=VBAT|NetColor=clRed
-Net336=NetName=VDDA|NetColor=clRed
-Net337=NetName=VDDPLL|NetColor=clRed
-Net338=NetName=VLED-|NetColor=$00434343
-Net339=NetName=VLED+|NetColor=clRed
-Net340=NetName=VREF-|NetColor=$00434343
-Net341=NetName=VREF+|NetColor=clRed
-Net342=NetName=VSSPLL|NetColor=$00434343
-Net343=NetName=Vsupply|NetColor=clRed
-Net344=NetName=Wkup|NetColor=$00F8DAC9
-Net345=NetName=X-|NetColor=clYellow
-Net346=NetName=X+|NetColor=clYellow
-Net347=NetName=Y-|NetColor=clYellow
-Net348=NetName=Y+|NetColor=clYellow
+Net336=NetName=VBATRTC|NetColor=clRed
+Net337=NetName=VDDA|NetColor=clRed
+Net338=NetName=VDDPLL|NetColor=clRed
+Net339=NetName=VLED-|NetColor=$00434343
+Net340=NetName=VLED+|NetColor=clRed
+Net341=NetName=VREF-|NetColor=$00434343
+Net342=NetName=VREF+|NetColor=clRed
+Net343=NetName=VSSPLL|NetColor=$00434343
+Net344=NetName=Vsupply|NetColor=clRed
+Net345=NetName=Wkup|NetColor=$00F8DAC9
+Net346=NetName=X-|NetColor=clYellow
+Net347=NetName=X+|NetColor=clYellow
+Net348=NetName=Y-|NetColor=clYellow
+Net349=NetName=Y+|NetColor=clYellow
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0
