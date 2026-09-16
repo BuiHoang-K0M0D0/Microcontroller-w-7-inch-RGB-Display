@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\buima\Desktop\UI_Board\UI_CURRENT_V1.1\UI_Board\NEW_UI.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=new_ui-roundholes.txt|DrillLayers=gtl,gp1,gp2,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=new_ui-slotholes.txt|DrillLayers=gtl,gp1,gp2,gbl

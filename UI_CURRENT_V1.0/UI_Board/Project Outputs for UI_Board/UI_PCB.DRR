@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: UI_PCB.PcbDoc   26/08/2026  12:59:13 CH
+NCDrill File Report For: UI_PCB.PcbDoc   16/09/2026  7:18:02 SA
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : SIG/PWR1 to SIG/PWR2
@@ -8,10 +8,10 @@ ASCII SlotHoles File : UI_PCB-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.3mm (12mil)                                             Round             654       PTH        3249.61mm (127.94inch)
+T1      0.3mm (12mil)                                             Round             654       PTH        3253.33mm (128.08inch)
 T2      0.4mm (16mil)                                             Round             1         PTH        0.00mm (0.00inch)
 T3      0.65mm (26mil)                                            Round             4         PTH        117.23mm (4.62inch)
-T4      0.7mm (28mil)                                             Round             16        PTH        174.86mm (6.88inch)
+T4      0.7mm (28mil)                                             Round             16        PTH        177.82mm (7.00inch)
 T5      0.7mm (28mil)                                             Slot              8         PTH        304.64mm (11.99inch)
 T6      0.914mm (36mil)                                           Round             2         PTH        2.57mm (0.10inch)
 T7      1mm (39mil)                                               Round             2         PTH        7.98mm (0.31inch)

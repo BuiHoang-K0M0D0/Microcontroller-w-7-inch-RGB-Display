@@ -235,134 +235,237 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GMEGQXQT
 
-[Document12]
-DocumentPath=NEW_UI.PcbDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=OWYJGTPG
-
 [GeneratedDocument1]
-DocumentPath=Project Outputs for UI_Board\Design Rule Check - UI_PCB.html
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_bot\components
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for UI_Board\UI_PCB-RoundHoles.TXT
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_top\components
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for UI_Board\UI_PCB-SlotHoles.TXT
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\eda\data
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for UI_Board\UI_PCB.DRR
+DocumentPath=Project Outputs for UI_Board\Design Rule Check - UI_PCB.html
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for UI_Board\UI_PCB.EXTREP
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\bottom_overlay\features
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for UI_Board\UI_PCB.LDP
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\bottom_paste\features
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for UI_Board\UI_PCB.REP
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\bottom_solder\features
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for UI_Board\UI_PCB.RUL
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_bot\features
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Plane_1.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\comp_+_top\features
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Plane_2.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\dielectric_1\features
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Signal_Bot.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\dielectric_2\features
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Signal_Top.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\dielectric_3\features
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Keep-out.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_non-plated_bottom-top\features
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Legend_Bot.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_plated_bottom-top\features
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Legend_Top.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\gnd1\features
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Mechanical_1.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\gns2\features
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Mechanical_13.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\rout\features
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Mechanical_15.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\sig_pwr1\features
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Pads_Bot.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\sig_pwr2\features
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Pads_Top.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\top_overlay\features
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Paste_Bot.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\top_paste\features
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Paste_Top.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\top_solder\features
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Profile.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\matrix\matrix
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for UI_Board\UI_PCB_Soldermask_Bot.gbr
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\netlists\cadnet\netlist
 DItemRevisionGUID=
 
 [GeneratedDocument25]
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\Pick Place for UI_PCB.csv
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\profile
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\stephdr
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_non-plated_bottom-top\tools
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\drill_plated_bottom-top\tools
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\odb\steps\pcb\layers\rout\tools
+DItemRevisionGUID=
+
+[GeneratedDocument31]
+DocumentPath=Project Outputs for UI_Board\UI_PCB-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument32]
+DocumentPath=Project Outputs for UI_Board\UI_PCB-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument33]
+DocumentPath=Project Outputs for UI_Board\UI_PCB.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument34]
+DocumentPath=Project Outputs for UI_Board\UI_PCB.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument35]
+DocumentPath=Project Outputs for UI_Board\UI_PCB.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument36]
+DocumentPath=..\..\..\..\..\..\ProgramData\Altium\Altium Designer {293B1CF7-F741-46DC-8A7F-10F0DC568042}\Extensions\EMIStream\Data\UI_PCB.REP
+DItemRevisionGUID=
+
+[GeneratedDocument37]
+DocumentPath=Project Outputs for UI_Board\UI_PCB.REP
+DItemRevisionGUID=
+
+[GeneratedDocument38]
+DocumentPath=Project Outputs for UI_Board\UI_PCB.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument39]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Plane_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument40]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Plane_2.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument41]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Signal_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument42]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Copper_Signal_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument43]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Keep-out.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument44]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Legend_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument45]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Legend_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument46]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Mechanical_1.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument47]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Mechanical_13.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument48]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Mechanical_15.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument49]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Pads_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument50]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Pads_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument51]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Paste_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument52]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Paste_Top.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument53]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Profile.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument54]
+DocumentPath=Project Outputs for UI_Board\UI_PCB_Soldermask_Bot.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument55]
 DocumentPath=Project Outputs for UI_Board\UI_PCB_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [Parameter1]
-Name=Title
-Value=UI BOARD
+Name=Author
+Value=K0M0D0 (BUI HOANG)
 
 [Parameter2]
 Name=Revision
 Value=V1.1
 
 [Parameter3]
-Name=Author
-Value=K0M0D0 (BUI HOANG)
+Name=Title
+Value=UI BOARD
 
 [Configuration1]
 Name=Sources
@@ -991,6 +1094,11 @@ OutputName12=Web Review Data
 OutputDocumentPath12=
 OutputVariantName12=
 OutputDefault12=0
+OutputType13=AnsysEDB
+OutputName13=Ansys EDB
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
