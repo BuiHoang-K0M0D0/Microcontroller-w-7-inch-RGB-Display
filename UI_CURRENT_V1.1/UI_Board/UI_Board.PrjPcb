@@ -347,42 +347,30 @@ DocumentPath=Project Outputs for UI_Board\NEW_UI_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for UI_Board\NEW_UI_Mechanical_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for UI_Board\NEW_UI_Mechanical_13.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for UI_Board\NEW_UI_Mechanical_15.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument19]
 DocumentPath=Project Outputs for UI_Board\NEW_UI_Pads_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for UI_Board\NEW_UI_Pads_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for UI_Board\NEW_UI_Paste_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument22]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for UI_Board\NEW_UI_Paste_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument23]
+[GeneratedDocument20]
 DocumentPath=Project Outputs for UI_Board\NEW_UI_Profile.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument24]
+[GeneratedDocument21]
 DocumentPath=Project Outputs for UI_Board\NEW_UI_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument25]
+[GeneratedDocument22]
 DocumentPath=Project Outputs for UI_Board\NEW_UI_Soldermask_Top.gbr
 DItemRevisionGUID=
 
